@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "F1 2026 Website",
 "scripts": {
-  "build": "node node_modules/@11ty/eleventy/eleventy.js"
+  "start": "eleventy --serve",
+  "build": "chmod +x node_modules/.bin/eleventy && npx @11ty/eleventy"
 },
   "keywords": [],
   "author": "",
