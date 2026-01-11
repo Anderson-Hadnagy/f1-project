@@ -2,9 +2,8 @@
   "name": "my-f1-project",
   "version": "1.0.0",
   "description": "F1 2026 Website",
-  "scripts": {
-  "start": "eleventy --serve",
-  "build": "npx @11ty/eleventy"
+"scripts": {
+  "build": "node node_modules/@11ty/eleventy/eleventy.js"
 },
   "keywords": [],
   "author": "",
