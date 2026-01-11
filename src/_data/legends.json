@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Michael Schumacher 🇩🇪",
+    "nickname": "The Red Baron",
+    "img": "https://placehold.co/500x500/b60000/fff?text=Schumacher",
+    "stats": [
+        { "num": "7", "label": "Titles" },
+        { "num": "91", "label": "Wins" },
+        { "num": "68", "label": "Poles" }
+    ],
+    "bio": "Schumacher is often credited with defining what a modern F1 driver is. Before him, drivers were talented but often lacked physical fitness. Schumacher trained like an Olympian.",
+    "fact": "In 2002, he was so dominant that he finished on the podium (Top 3) in every single race of the season. A record that still stands."
+  },
+  {
+    "name": "Lewis Hamilton 🇬🇧",
+    "nickname": "Sir Lewis",
+    "img": "https://placehold.co/500x500/00d2be/fff?text=Hamilton",
+    "stats": [
+        { "num": "7", "label": "Titles" },
+        { "num": "105", "label": "Wins" },
+        { "num": "104", "label": "Poles" }
+    ],
+    "bio": "Statistically the greatest of all time (GOAT). Hamilton burst onto the scene in 2007. He is known for his 'Hammer Time'—the ability to suddenly drive incredibly fast laps.",
+    "fact": "He was Knighted by the Prince of Wales in 2021, making him 'Sir Lewis Hamilton'."
+  },
+  {
+    "name": "Ayrton Senna 🇧🇷",
+    "nickname": "Rain Master",
+    "img": "https://placehold.co/500x500/fcd800/000?text=Senna",
+    "stats": [
+        { "num": "3", "label": "Titles" },
+        { "num": "41", "label": "Wins" },
+        { "num": "65", "label": "Poles" }
+    ],
+    "bio": "Senna drove with a spiritual intensity that terrified and amazed his rivals. He was a master of the rain. His rivalry with teammate Alain Prost was fierce.",
+    "fact": "Senna held the record for most pole positions in F1 history (65) for over a decade."
+  },
+  {
+    "name": "Niki Lauda 🇦🇹",
+    "nickname": "The Rat",
+    "img": "https://placehold.co/500x500/d60000/fff?text=Niki+Lauda",
+    "stats": [
+        { "num": "3", "label": "Titles" },
+        { "num": "25", "label": "Wins" },
+        { "num": "54", "label": "Podiums" }
+    ],
+    "bio": "Lauda was known for his cold, calculating logic. In 1976, he suffered a horrific fiery crash. Incredibly, he returned to the cockpit just 6 weeks later.",
+    "fact": "He holds the record for the closest Championship win in history. In 1984, he beat his teammate Alain Prost by just 0.5 points!"
+  },
+  {
+    "name": "Max Verstappen 🇳🇱",
+    "nickname": "Mad Max",
+    "img": "https://placehold.co/500x500/0600ef/fff?text=Verstappen",
+    "stats": [
+        { "num": "4", "label": "Titles" },
+        { "num": "62", "label": "Wins" },
+        { "num": "18", "label": "Age Debut" }
+    ],
+    "bio": "The defining driver of the current generation. Max skipped F2 and jumped straight into F1 at age 17. His driving style is aggressive and uncompromising.",
+    "fact": "Max is the reason the rules changed. Because he joined so young (17), F1 created the 'Verstappen Rule' requiring drivers to be 18."
+  }
+]

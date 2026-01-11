@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title | default("F1 2026") }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+    {% if page_css %}
+    <style>
+        {{ page_css | safe }}
+    </style>
+    {% endif %}
+</head>
+<body>
+
+    <nav>
+        <div class="logo">F1 2026</div>
+        <ul>
+            {% for item in navigation %}
+            <li>
+                <a href="{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %}>
+                    {{ item.text }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <div class="container">
+        {{ content | safe }}
+    </div>
+
+    {% if page_js %}
+    <script src="{{ page_js }}"></script>
+    {% endif %}
+</body>
+</html>

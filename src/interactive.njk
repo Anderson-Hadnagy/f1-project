@@ -1,0 +1,73 @@
+---
+layout: base.njk
+title: F1 Game Zone
+page_js: /assets/js/quiz.js
+page_css: |
+    .flag-btn {
+        width: 80px; height: 60px; border: 2px solid #555; margin: 5px;
+        cursor: pointer; transition: transform 0.2s; border-radius: 5px;
+    }
+    .flag-btn:hover { transform: scale(1.1); }
+    .btn-green { background-color: #00d2be; }
+    .btn-yellow { background-color: #fcd800; }
+    .btn-red { background-color: #e10600; }
+    .btn-checkered { background: repeating-linear-gradient(45deg, #000 0, #000 10px, #fff 10px, #fff 20px); }
+    
+    #flag-scenario {
+        background: #111; padding: 15px; border-radius: 5px;
+        color: #fff; font-style: italic; margin: 15px 0;
+        min-height: 50px; display: flex; align-items: center; justify-content: center;
+        border: 1px dashed #444;
+    }
+---
+
+<h1>Interactive Fan Zone</h1>
+
+<div class="grid-2" style="margin-bottom: 30px;">
+    <div class="game-panel">
+        <div>
+            <h2>1. Reaction Test</h2>
+            <p>F1 starts happen in 0.2s. Click when GREEN!</p>
+        </div>
+        <div>
+            <div id="reaction-box" onclick="startReactionGame()">
+                <span id="reaction-text">CLICK TO START</span>
+            </div>
+            <p id="reaction-result" style="color:var(--f1-red); font-weight:bold; margin-top:10px; min-height: 25px;"></p>
+        </div>
+    </div>
+
+    <div class="game-panel">
+        <div>
+            <h2>2. Strategy Calc</h2>
+            <p>Input laps remaining to get tyre choice.</p>
+        </div>
+        <div>
+            <input type="number" id="lapsInput" placeholder="0" style="width:100%; box-sizing:border-box; margin-bottom:10px;">
+            <button class="action-btn" onclick="calculateStrategy()" style="width:100%;">Get Strategy</button>
+            <div id="strategy-output" style="margin-top:10px; font-weight:bold; background:#333; padding:10px; border-radius:5px; min-height:25px;">Result...</div>
+        </div>
+    </div>
+</div>
+
+<div class="game-panel">
+    <h2>3. Flag Marshal Challenge</h2>
+    <p>Read the scenario and click the correct flag immediately!</p>
+    
+    <button class="action-btn" onclick="nextScenario()">Start / Next Scenario</button>
+    <div id="flag-scenario">Press Start to begin...</div>
+    <div style="display:flex; justify-content:center; gap:10px;">
+        <button class="flag-btn btn-green" onclick="checkFlag('green')" title="Track Clear"></button>
+        <button class="flag-btn btn-yellow" onclick="checkFlag('yellow')" title="Hazard Ahead"></button>
+        <button class="flag-btn btn-red" onclick="checkFlag('red')" title="Stop Race"></button>
+        <button class="flag-btn btn-checkered" onclick="checkFlag('checkered')" title="Race Finish"></button>
+    </div>
+    <p id="flag-result" style="text-align:center; font-weight:bold; margin-top:10px; min-height:25px;"></p>
+</div>
+
+<div class="game-panel" style="margin-top: 30px;">
+    <h2>4. The Ultimate F1 Quiz</h2>
+    
+    <div id="quiz-game-area" class="quiz-game-area">
+        </div>
+</div>

@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main # Ensure this matches your GitHub branch
+
+media_folder: "src/assets/images" # Where images will be saved
+public_folder: "/assets/images"
+
+collections:
+  - name: "teams"
+    label: "F1 Teams"
+    folder: "src/_data/teams" # Where the data files will go
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{name}}"
+    fields:
+      - { label: "Team Name", name: "name", widget: "string" }
+      - { label: "Base", name: "base", widget: "string" }
+      - { label: "Hex Color", name: "color", widget: "string" }
+      - { label: "Drivers", name: "drivers", widget: "list", summary: "{{fields.driver}}" }
+      - { label: "Description", name: "desc", widget: "text" }

@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: F1 2026 Teams
+---
+<header style="text-align: center;">
+    <h1>The 2026 Grid</h1>
+    <p>11 Teams. 22 Drivers. One Goal.</p>
+</header>
+
+<div class="grid-4">
+    {% for team in teams %}
+    <div class="card" style="border-top: 4px solid {{ team.color }};">
+        <div class="team-card-header">
+            <h3>{{ team.name }}</h3>
+            <span style="font-size: 0.9rem; color: #888;">Base: {{ team.base }}</span>
+        </div>
+        <ul class="drivers-list">
+            {% for driver in team.drivers %}
+            <li>{{ driver }}</li>
+            {% endfor %}
+        </ul>
+        <p style="font-size: 0.9rem; margin-top: 10px;">{{ team.desc }}</p>
+    </div>
+    {% endfor %}
+</div>

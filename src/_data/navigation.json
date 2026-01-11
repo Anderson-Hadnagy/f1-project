@@ -1,0 +1,7 @@
+[
+  { "text": "Home", "url": "/" },
+  { "text": "History", "url": "/history/" },
+  { "text": "Legends", "url": "/legends/" },
+  { "text": "Teams", "url": "/teams/" },
+  { "text": "Game Zone", "url": "/interactive/" }
+]
