@@ -1,9 +1,9 @@
-eleventyConfig.addPassthroughCopy("src/admin");
-
 module.exports = function(eleventyConfig) {
-  // Pass through CSS and JS to the output folder
+  // 1. Copy your assets to the final site folder
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/admin");
 
+  // 2. Return your directory settings
   return {
     dir: {
       input: "src",
