@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "F1 2026 Website",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
-  },
+  "start": "eleventy --serve",
+  "build": "npx @11ty/eleventy"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
