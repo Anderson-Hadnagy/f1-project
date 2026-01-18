@@ -10,7 +10,7 @@ title: F1 2026 Teams
 
 <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
     
-    {# 1. CHECK IF DATA EXISTS BEFORE TRYING TO SORT IT #}
+    {# 1. SAFETY CHECK: Only run the loop if 'teams' actually exists #}
     {% if teams %}
         
         {% for filename, team in teams | dictsort %}
@@ -34,10 +34,11 @@ title: F1 2026 Teams
         {% endfor %}
 
     {% else %}
-        {# 2. THIS SHOWS IF NO DATA EXISTS YET (Prevents Crash) #}
-        <div style="grid-column: 1 / -1; text-align: center; padding: 50px;">
-            <p>No teams found yet. The site is building successfully!</p>
-            <p>Go to <a href="/admin/" style="color: red; font-weight: bold;">/admin/</a> to create your first team.</p>
+        {# 2. FALLBACK: Show this if no teams exist yet (Prevents the crash!) #}
+        <div style="grid-column: 1 / -1; text-align: center; padding: 50px; background: #222; border-radius: 10px;">
+            <h3>Ready to Start</h3>
+            <p>The site is working! Now you need to add data.</p>
+            <p>Go to <a href="/admin/" style="color: #ff3e3e; font-weight: bold;">/admin/</a> and create your first team.</p>
         </div>
     {% endif %}
 
