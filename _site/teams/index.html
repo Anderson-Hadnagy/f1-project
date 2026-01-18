@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <meta charset="UTF-8">
     <title>F1 2026 Teams</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     
 </head>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 <body>
 
     <nav>
@@ -53,171 +65,6 @@
 </header>
 
 <div class="grid-4">
-    
-    <div class="card" style="border-top: 4px solid #ff2800;">
-        <div class="team-card-header">
-            <h3>Ferrari</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Maranello, Italy</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>16. Charles Leclerc</li>
-            
-            <li>44. Lewis Hamilton</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">The most successful team in history. With Hamilton joining, they have the strongest lineup on the grid.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #ff8700;">
-        <div class="team-card-header">
-            <h3>McLaren</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Woking, UK</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>4. Lando Norris</li>
-            
-            <li>81. Oscar Piastri</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">The reigning Constructor Champions. Their car is the benchmark for aerodynamics.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #0600ef;">
-        <div class="team-card-header">
-            <h3>Red Bull Racing</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Milton Keynes, UK</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>3. Max Verstappen</li>
-            
-            <li>6. Isack Hadjar</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">After a tough 2025, they are fighting back with their new Ford-powered engine.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #00d2be;">
-        <div class="team-card-header">
-            <h3>Mercedes-AMG</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Brackley, UK</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>63. George Russell</li>
-            
-            <li>12. Kimi Antonelli</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">A mix of experience and raw young talent. Antonelli is the rookie to watch.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #006f62;">
-        <div class="team-card-header">
-            <h3>Aston Martin</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Silverstone, UK</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>14. Fernando Alonso</li>
-            
-            <li>18. Lance Stroll</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">Designed by Adrian Newey, this car is expected to be a title contender.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #ffffff;">
-        <div class="team-card-header">
-            <h3>Audi F1 Team</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Hinwil, Switzerland</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>27. Nico Hulkenberg</li>
-            
-            <li>10. Gabriel Bortoleto</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">The German giant enters F1 for the first time, taking over the old Sauber team.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #005aff;">
-        <div class="team-card-header">
-            <h3>Williams Racing</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Grove, UK</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>23. Alexander Albon</li>
-            
-            <li>55. Carlos Sainz</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">A historic team on the rise with one of the best driver pairings in the midfield.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #ff69b4;">
-        <div class="team-card-header">
-            <h3>Alpine</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Enstone, UK</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>10. Pierre Gasly</li>
-            
-            <li>43. Franco Colapinto</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">Representing France, they are looking to solve their engine reliability issues.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #1c3bc6;">
-        <div class="team-card-header">
-            <h3>Racing Bulls</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Faenza, Italy</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>30. Liam Lawson</li>
-            
-            <li>41. Arvid Linblad</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">Red Bull&#39;s sister team, now focusing on developing young Japanese talent.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #b6babb;">
-        <div class="team-card-header">
-            <h3>Haas F1 Team</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Kannapolis, USA</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>31. Esteban Ocon</li>
-            
-            <li>87. Oliver Bearman</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">The American underdog team known for doing a lot with a small budget.</p>
-    </div>
-    
-    <div class="card" style="border-top: 4px solid #f1c40f;">
-        <div class="team-card-header">
-            <h3>Cadillac Andretti</h3>
-            <span style="font-size: 0.9rem; color: #888;">Base: Fishers, USA</span>
-        </div>
-        <ul class="drivers-list">
-            
-            <li>11. Sergio Perez</li>
-            
-            <li>77. Valtteri Bottas</li>
-            
-        </ul>
-        <p style="font-size: 0.9rem; margin-top: 10px;">The 11th team! They bring massive GM support and two very experienced race winners.</p>
-    </div>
     
 </div>
     </div>

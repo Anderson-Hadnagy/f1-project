@@ -1,13 +1,13 @@
 module.exports = function(eleventyConfig) {
-  // This tells Eleventy to copy the admin folder as-is
-  eleventyConfig.addPassthroughCopy("admin"); 
-  
-  // If your files are inside a 'src' folder, use this instead:
+  // If your admin folder is at the root:
+  eleventyConfig.addPassthroughCopy("admin");
+
+  // OR if your admin folder is inside a 'src' folder:
   // eleventyConfig.addPassthroughCopy("src/admin");
 
   return {
     dir: {
-      input: "src", // check if your input folder is 'src' or root
+      input: "src", // check if your input is "src" or root "."
       output: "_site"
     }
   };
