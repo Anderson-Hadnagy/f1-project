@@ -1,13 +1,13 @@
 module.exports = function(eleventyConfig) {
-  // If your admin folder is at the root:
-  eleventyConfig.addPassthroughCopy("admin");
-
-  // OR if your admin folder is inside a 'src' folder:
-  // eleventyConfig.addPassthroughCopy("src/admin");
+  // This tells 11ty: "Take the whole admin folder and move it to the build"
+  eleventyConfig.addPassthroughCopy("src/admin");
+  
+  // Also ensure your assets/images folder is copied so the CMS can save photos
+  eleventyConfig.addPassthroughCopy("src/assets/images");
 
   return {
     dir: {
-      input: "src", // check if your input is "src" or root "."
+      input: "src",
       output: "_site"
     }
   };
