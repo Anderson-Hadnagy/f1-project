@@ -1,0 +1,9 @@
+{
+  "name": "Ferrari",
+  "base": "Monaco",
+  "color": "sanyi",
+  "drivers": [
+    "Sanyika"
+  ],
+  "desc": "Yes :)"
+}
