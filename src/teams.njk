@@ -9,8 +9,8 @@ title: F1 2026 Teams
 </header>
 
 <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-    {# Use 'dictsort' to keep teams in alphabetical order #}
-    {% for filename, team in teams | dictsort %}
+    {# THE FIX: Added 'default({})' so the build doesn't crash when empty #}
+    {% for filename, team in teams | default({}) | dictsort %}
     <div class="card" style="border-top: 6px solid {{ team.color }}; padding: 20px; background: #1f1f1f; border-radius: 8px; color: white;">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <h3 style="margin: 0; font-size: 1.5rem;">{{ team.name }}</h3>
