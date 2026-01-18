@@ -10,8 +10,8 @@ title: F1 2026 Teams
 
 <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
     
-    {# Now that you have data, this loop will run perfectly! #}
-    {% for filename, team in teams | dictsort %}
+    {# FIX: We removed 'dictsort' so this loop will simply skip if no teams exist #}
+    {% for filename, team in teams %}
     
     <div class="card" style="border-top: 6px solid {{ team.color }}; padding: 20px; background: #1f1f1f; border-radius: 8px; color: white;">
         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -31,5 +31,10 @@ title: F1 2026 Teams
         </ul>
     </div>
 
+    {% else %}
+    <div style="grid-column: 1 / -1; text-align: center; padding: 50px;">
+        <h3>Waiting for Data...</h3>
+        <p>The site is working! Now go to the <a href="/admin/" style="color: red;">CMS Admin</a> to add your teams.</p>
+    </div>
     {% endfor %}
 </div>
