@@ -17,5 +17,5 @@ collections:
       - { label: "Team Name", name: "name", widget: "string" }
       - { label: "Base", name: "base", widget: "string" }
       - { label: "Hex Color", name: "color", widget: "string" }
-      - { label: "Drivers", name: "drivers", widget: "list", summary: "{{fields.driver}}" }
+      - { label: "Drivers", name: "drivers", widget: "list", field: { label: "Driver Name", name: "driver", widget: "string" }}
       - { label: "Description", name: "desc", widget: "text" }

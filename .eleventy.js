@@ -1,12 +1,13 @@
 module.exports = function(eleventyConfig) {
-  // This is the most important line for the CMS to work!
-  eleventyConfig.addPassthroughCopy("src/admin");
+  // This tells Eleventy to copy the admin folder to the output (_site)
+  eleventyConfig.addPassthroughCopy("admin"); 
   
-  eleventyConfig.addPassthroughCopy("src/assets");
+  // Optional: If you want to use images from your CMS
+  eleventyConfig.addPassthroughCopy("src/assets/images");
 
   return {
     dir: {
-      input: "src",
+      input: "src", // or wherever your source files live
       output: "_site"
     }
   };

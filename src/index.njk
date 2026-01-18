@@ -49,4 +49,23 @@ title: F1 - The Pinnacle of Motorsport
             <a href="/interactive/" style="color: var(--accent-blue); text-decoration: underline;">Play Now &rarr;</a>
         </div>
     </div>
+    <section>
+    <h2>Current F1 Grid</h2>
+    <div class="grid-3">
+        {% for team in teams %}
+        <div class="card" style="border-top: 5px solid {{ team.color }};">
+            <h3>{{ team.name }}</h3>
+            <p><strong>Base:</strong> {{ team.base }}</p>
+            <p>{{ team.desc }}</p>
+            <ul>
+                {% for driver in team.drivers %}
+                <li>{{ driver }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% else %}
+        <p>No teams found. Log into the <a href="/admin/">CMS</a> to add some!</p>
+        {% endfor %}
+    </div>
+</section>
 </section>
