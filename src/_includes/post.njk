@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+
+<div class="container" style="max-width: 800px; margin-top: 40px;">
+    
+    <header style="text-align: center; margin-bottom: 40px; border-bottom: 1px solid #333; padding-bottom: 20px;">
+        <h4 style="color: var(--f1-red); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Breaking News</h4>
+        <h1 style="font-size: 3rem; margin-bottom: 10px;">{{ title }}</h1>
+        <div style="color: #888; font-size: 0.9rem;">
+            <span>By <strong>{{ author }}</strong></span> | 
+            <span>{{ date | date }}</span>
+        </div>
+    </header>
+
+    {% if image %}
+    <div style="margin-bottom: 40px; border-radius: 12px; overflow: hidden; border: 1px solid #333;">
+        <img src="{{ image }}" alt="{{ title }}" style="width: 100%; height: auto; display: block;">
+    </div>
+    {% endif %}
+
+    <article style="font-size: 1.2rem; line-height: 1.8; color: #ddd;">
+        {{ content | safe }}
+    </article>
+
+    <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #333;">
+        <a href="/blog/" style="color: var(--f1-red); font-weight: bold; text-decoration: none;">&larr; Back to News</a>
+    </div>
+
+</div>
