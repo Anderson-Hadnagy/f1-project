@@ -17,9 +17,24 @@ collections:
       - { label: "Team Name", name: "name", widget: "string" }
       - { label: "Base", name: "base", widget: "string" }
       - { label: "Hex Color", name: "color", widget: "color" }
+      # This creates a list of objects: [{driver: "Name"}, {driver: "Name"}]
       - label: "Drivers"
         name: "drivers"
         widget: "list"
         summary: "{{driver}}"
         field: { label: "Driver Name", name: "driver", widget: "string" }
       - { label: "Description", name: "desc", widget: "text" }
+      
+  - name: "blog"
+    label: "News & Articles"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "string", default: "F1 Editor"}
+      - {label: "Thumbnail", name: "image", widget: "image", required: false}
+      # ADD THIS FIELD BELOW:
+      - {label: "Body", name: "body", widget: "markdown"}
