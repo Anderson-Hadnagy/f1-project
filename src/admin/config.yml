@@ -17,7 +17,6 @@ collections:
       - { label: "Team Name", name: "name", widget: "string" }
       - { label: "Base", name: "base", widget: "string" }
       - { label: "Hex Color", name: "color", widget: "color" }
-      # This creates a list of objects: [{driver: "Name"}, {driver: "Name"}]
       - label: "Drivers"
         name: "drivers"
         widget: "list"

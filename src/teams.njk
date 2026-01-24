@@ -9,9 +9,23 @@ title: F1 2026 Teams
 </header>
 
 <div class="grid-4">
+
+    {# 1. Create a clean list regardless of data source #}
+    {% set teamList = [] %}
     
-    {# Loop through your teams data #}
-    {% for filename, team in teams %}
+    {# Case A: Data is an Object (Folder of files) #}
+    {% if teams | length and teams | first is not defined %}
+        {% for key, val in teams %}
+            {% set teamList = (teamList.push(val), teamList) %}
+        {% endfor %}
+    
+    {# Case B: Data is a List (Single JSON file) #}
+    {% else %}
+        {% set teamList = teams %}
+    {% endif %}
+
+    {# 2. Loop through the clean list #}
+    {% for team in teamList %}
     
     <div class="card" style="border-top: 4px solid {{ team.color }};">
         
@@ -25,7 +39,7 @@ title: F1 2026 Teams
         <ul class="drivers-list">
             {% for item in team.drivers %}
             <li>
-                {# FIX: Check if it's an Object (CMS) or just Text (JSON) #}
+                {# Handle both String drivers and Object drivers #}
                 {% if item.driver %}
                     {{ item.driver }}
                 {% else %}
@@ -44,7 +58,8 @@ title: F1 2026 Teams
     
     <div style="grid-column: 1 / -1; text-align: center; padding: 50px;">
         <h3>Waiting for Data...</h3>
-        <p>Go to the <a href="/admin/" style="color: red;">CMS Admin</a> to add your teams.</p>
+        <p>If you see this, check that <code>src/_data/teams/</code> is not empty.</p>
+        <pre style="text-align: left; background: #111; padding: 10px;">{{ teams | dump(2) }}</pre>
     </div>
 
     {% endfor %}
