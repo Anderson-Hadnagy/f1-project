@@ -25,16 +25,32 @@
 </script>
 <body>
 
-    <nav>
+<nav>
         <div class="logo">F1 2026</div>
         <ul>
-            {% for item in navigation %}
             <li>
-                <a href="{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %}>
-                    {{ item.text }}
-                </a>
+                <a href="/" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
             </li>
-            {% endfor %}
+            
+            <li>
+                <a href="/blog/" {% if '/blog/' in page.url %}class="active"{% endif %}>News</a>
+            </li>
+
+            <li>
+                <a href="/history/" {% if '/history/' in page.url %}class="active"{% endif %}>History</a>
+            </li>
+            
+            <li>
+                <a href="/legends/" {% if '/legends/' in page.url %}class="active"{% endif %}>Legends</a>
+            </li>
+            
+            <li>
+                <a href="/teams/" {% if '/teams/' in page.url %}class="active"{% endif %}>Teams</a>
+            </li>
+            
+            <li>
+                <a href="/interactive/" {% if '/interactive/' in page.url %}class="active"{% endif %}>Game Zone</a>
+            </li>
         </ul>
     </nav>
 

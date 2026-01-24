@@ -1,0 +1,61 @@
+---
+layout: base.njk
+title: F1 News Grid
+---
+
+<header style="text-align: center; margin-bottom: 50px;">
+    <h1>Paddock News</h1>
+    <p>Latest updates, rumors, and technical analysis.</p>
+</header>
+
+<div class="container">
+    <div class="grid-3">
+        
+        {# 1. Loop through the 'blog' collection (Newest first) #}
+        {% for post in collections.blog | reverse %}
+        
+        <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+            
+            {# 2. Thumbnail Image #}
+            {% if post.data.image %}
+            <div style="height: 200px; overflow: hidden; border-radius: 8px; margin-bottom: 15px;">
+                <img src="{{ post.data.image }}" alt="{{ post.data.title }}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+            </div>
+            {% endif %}
+
+            {# 3. Article Info #}
+            <div style="flex-grow: 1;">
+                <div style="font-size: 0.8rem; color: #888; margin-bottom: 8px;">
+                    <span style="color: var(--f1-red); font-weight: bold;">{{ post.date | date }}</span>
+                    {% if post.data.author %} • {{ post.data.author }} {% endif %}
+                </div>
+
+                <h3 style="font-size: 1.4rem; margin: 0 0 10px 0;">
+                    <a href="{{ post.url }}" style="text-decoration: none; color: white;">{{ post.data.title }}</a>
+                </h3>
+                
+                <p style="font-size: 0.95rem; color: #ccc;">
+                    {# Show a short preview of the text #}
+                    {{ post.templateContent | striptags | truncate(100) }}...
+                </p>
+            </div>
+
+            {# 4. Read More Button #}
+            <a href="{{ post.url }}" style="margin-top: 20px; display: inline-block; color: var(--accent-blue); font-weight: bold; text-decoration: none;">
+                Read Full Story &rarr;
+            </a>
+
+        </div>
+
+        {% else %}
+            
+        {# Fallback if no posts exist yet #}
+        <div style="grid-column: 1 / -1; text-align: center; padding: 60px;">
+            <h3>No News Yet</h3>
+            <p>Head to the <a href="/admin/" style="color: var(--f1-red);">CMS Admin</a> to publish your first story.</p>
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
