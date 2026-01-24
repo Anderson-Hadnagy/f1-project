@@ -1,0 +1,10 @@
+{
+  "name": "Ferrari",
+  "base": "Maranello, Italy",
+  "color": "#ff2800",
+  "drivers": [
+    "16. Charles Leclerc",
+    "44. Lewis Hamilton"
+  ],
+  "desc": "The most successful team in history. With Hamilton joining, they have the strongest lineup on the grid."
+}
