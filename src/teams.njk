@@ -10,7 +10,7 @@ title: F1 2026 Teams
 
 <div class="grid-4">
     
-    {# Loop through the teams object (since you use a folder of JSON files) #}
+    {# Loop through your teams data #}
     {% for filename, team in teams %}
     
     <div class="card" style="border-top: 4px solid {{ team.color }};">
@@ -21,10 +21,17 @@ title: F1 2026 Teams
         </div>
 
         <h4 style="color: {{ team.color }}; margin-top: 15px; margin-bottom: 5px; font-size: 0.8rem;">DRIVERS</h4>
+        
         <ul class="drivers-list">
-            {# CMS saves drivers as objects: { driver: "Name" } #}
             {% for item in team.drivers %}
-            <li>{{ item.driver }}</li>
+            <li>
+                {# FIX: Check if it's an Object (CMS) or just Text (JSON) #}
+                {% if item.driver %}
+                    {{ item.driver }}
+                {% else %}
+                    {{ item }}
+                {% endif %}
+            </li>
             {% endfor %}
         </ul>
 
