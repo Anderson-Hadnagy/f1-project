@@ -1,10 +1,15 @@
 ---
 layout: post.njk
 title: "The Eternal Samurai: Why Alonso Will Never Quit"
-date: 2026-01-28
-author: "F1 Editor"
-image: "/assets/images/alonso.jpg"
-tags: ["F1", "Legends", "Aston Martin"]
+date: 2026-01-23T06:05:00.000+01:00
+author: Zsiros András
+image: /assets/images/alonso.jpg
+tags:
+  - F1
+  - Legends
+  - Aston Martin
+  - Fernando Alonso
+  - The Rookie
 ---
 
 In a sport obsessed with youth, where teenagers like Max Verstappen and Kimi Antonelli grab the headlines, one man defies the logic of time. Fernando Alonso is not just surviving in Formula 1; he is still teaching the new generation how to race.
