@@ -1,10 +1,16 @@
 ---
 layout: post.njk
 title: "The Weekend the World Stood Still: Imola 1994"
-date: 2026-05-01
-author: "F1 Editor"
-image: "/assets/images/senna-imola.jpg"
-tags: ["F1", "Legends", "History"]
+date: 2026-01-14T17:04:00.000+01:00
+author: Zsiros András
+image: /assets/images/senna-imola.jpg
+tags:
+  - F1
+  - Legends
+  - History
+  - Accident
+  - Ayrton Senna
+  - Death
 ---
 
 In a sport defined by speed and danger, there is one weekend that stands as the dividing line between the old world and the new. Before May 1, 1994, Formula 1 drivers were seen as invincible gladiators. After the death of Ayrton Senna, the world was forced to remember they were mortal.
