@@ -2,9 +2,14 @@
 layout: post.njk
 title: "The Unbeatable: Analyzing Verstappen's Record-Breaking Era"
 date: 2026-01-27
-author: "F1 Editor"
-image: "/assets/images/maxxx.jpg"
-tags: ["F1", "Records", "Verstappen"]
+author: Zsiros András
+image: /assets/images/maxxx.jpg
+tags:
+  - F1
+  - Records
+  - Verstappen
+  - Dominance
+  - Red Bull
 ---
 
 In the history of Formula 1, we have seen eras of dominance from Ferrari, McLaren, and Mercedes. But what Max Verstappen and Red Bull Racing achieved in 2023 wasn't just dominance—it was perfection.
