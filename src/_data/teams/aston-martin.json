@@ -1,0 +1,10 @@
+{
+  "color": "#006f62",
+  "name": "Aston Martin",
+  "base": "Silverstone, UK",
+  "drivers": [
+    "14. Fernando Alonso",
+    "18. Lance Stroll"
+  ],
+  "desc": "Designed by Adrian Newey, this car is expected to be a title contender."
+}
