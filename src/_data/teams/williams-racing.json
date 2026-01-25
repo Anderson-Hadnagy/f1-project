@@ -1,0 +1,10 @@
+{
+  "name": "Williams Racing",
+  "color": "#005aff",
+  "base": "Grove, UK",
+  "drivers": [
+    "23. Alexander Albon",
+    "55. Carlos Sainz"
+  ],
+  "desc": "A historic team on the rise with one of the best driver pairings in the midfield."
+}

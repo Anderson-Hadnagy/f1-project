@@ -1,0 +1,10 @@
+{
+  "color": "#0600ef",
+  "name": "Red Bull Racing",
+  "base": "Milton Keynes, UK",
+  "drivers": [
+    "3. Max Verstappen",
+    "6. Isack Hadjar"
+  ],
+  "desc": "After a tough 2025, they are fighting back with their new Ford-powered engine."
+}

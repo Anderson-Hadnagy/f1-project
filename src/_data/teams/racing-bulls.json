@@ -1,0 +1,10 @@
+{
+  "name": "Racing Bulls",
+  "color": "#1c3bc6",
+  "base": "Base: Faenza, Italy",
+  "drivers": [
+    "30. Liam Lawson",
+    "41. Arvid Linblad"
+  ],
+  "desc": "Red Bull's sister team."
+}

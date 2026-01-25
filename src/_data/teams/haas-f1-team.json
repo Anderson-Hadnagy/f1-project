@@ -1,0 +1,10 @@
+{
+  "color": "#b6babb",
+  "name": "Haas F1 Team",
+  "base": "Kannapolis, USA",
+  "drivers": [
+    "31. Esteban Ocon",
+    "87. Oliver Bearman"
+  ],
+  "desc": "The American underdog team known for doing a lot with a small budget."
+}

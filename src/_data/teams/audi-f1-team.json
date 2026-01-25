@@ -1,0 +1,10 @@
+{
+  "color": "#ffffff",
+  "name": "Audi F1 Team",
+  "base": "Hinwil, Switzerland",
+  "drivers": [
+    "27. Nico Hulkenberg",
+    "10. Gabriel Bortoleto"
+  ],
+  "desc": "The German giant enters F1 for the first time, taking over the old Sauber team."
+}
