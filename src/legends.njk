@@ -1,72 +1,6 @@
 ---
 layout: base.njk
 title: F1 Legends
-legends:
-  - name: "Michael Schumacher 🇩🇪"
-    nickname: "The Red Baron"
-    img: "/assets/images/michel.jpg"
-    bio: "Schumacher is often credited with defining what a modern F1 driver is. Before him, drivers were talented but often lacked physical fitness. Schumacher trained like an Olympian."
-    fact: "In 2002, he was so dominant that he finished on the podium (Top 3) in every single race of the season. A record that still stands."
-    stats:
-      - num: "7"
-        label: "Titles"
-      - num: "91"
-        label: "Wins"
-      - num: "68"
-        label: "Poles"
-
-  - name: "Lewis Hamilton 🇬🇧"
-    nickname: "Sir Lewis"
-    img: "/assets/images/hamilton.jpg"
-    bio: "Statistically the greatest of all time (GOAT). Hamilton burst onto the scene in 2007. He is known for his 'Hammer Time'—the ability to suddenly drive incredibly fast laps."
-    fact: "He was Knighted by the Prince of Wales in 2021, making him 'Sir Lewis Hamilton'."
-    stats:
-      - num: "7"
-        label: "Titles"
-      - num: "105"
-        label: "Wins"
-      - num: "104"
-        label: "Poles"
-
-  - name: "Ayrton Senna 🇧🇷"
-    nickname: "Rain Master"
-    img: "/assets/images/senna.jpg"
-    bio: "Senna drove with a spiritual intensity that terrified and amazed his rivals. He was a master of the rain. His rivalry with teammate Alain Prost was fierce."
-    fact: "Senna held the record for most pole positions in F1 history (65) for over a decade."
-    stats:
-      - num: "3"
-        label: "Titles"
-      - num: "41"
-        label: "Wins"
-      - num: "65"
-        label: "Poles"
-
-  - name: "Niki Lauda 🇦🇹"
-    nickname: "The Rat"
-    img: "/assets/images/niki.jpg"
-    bio: "Lauda was known for his cold, calculating logic. In 1976, he suffered a horrific fiery crash. Incredibly, he returned to the cockpit just 6 weeks later."
-    fact: "He holds the record for the closest Championship win in history. In 1984, he beat his teammate Alain Prost by just 0.5 points!"
-    stats:
-      - num: "3"
-        label: "Titles"
-      - num: "25"
-        label: "Wins"
-      - num: "54"
-        label: "Podiums"
-
-  - name: "Max Verstappen 🇳🇱"
-    nickname: "Mad Max"
-    img: "/assets/images/max.jpg"
-    bio: "The defining driver of the current generation. Max skipped F2 and jumped straight into F1 at age 17. His driving style is aggressive and uncompromising."
-    fact: "Max is the reason the rules changed. Because he joined so young (17), F1 created the 'Verstappen Rule' requiring drivers to be 18."
-    stats:
-      - num: "4"
-        label: "Titles"
-      - num: "62"
-        label: "Wins"
-      - num: "18"
-        label: "Age Debut"
-
 page_css: |
     .legend-card {
         display: flex; flex-wrap: wrap; background: var(--card-bg);
@@ -90,33 +24,28 @@ page_css: |
     <p>In-depth profiles of the drivers who changed history.</p>
 </header>
 
-<div class="container">
-    {% for legend in legends %}
-    <div class="legend-card">
-        <div class="legend-img">
-            <img src="{{ legend.img }}" alt="{{ legend.name }}" style="width:100%; height:100%; object-fit:cover;">
+{% for legend in legends %}
+<div class="legend-card">
+    <div class="legend-img">
+        <img src="{{ legend.img }}" alt="{{ legend.name }}" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div class="legend-content">
+        <div class="legend-header">
+            <h2>{{ legend.name }}</h2>
+            <span class="nickname">"{{ legend.nickname }}"</span>
         </div>
-        <div class="legend-content">
-            <div class="legend-header">
-                <h2>{{ legend.name }}</h2>
-                <span class="nickname">"{{ legend.nickname }}"</span>
+        <div class="stat-grid">
+            {% for stat in legend.stats %}
+            <div class="stat-box">
+                <span class="stat-num">{{ stat.num }}</span>
+                <span class="stat-label">{{ stat.label }}</span>
             </div>
-            
-            <div class="stat-grid">
-                {% for stat in legend.stats %}
-                <div class="stat-box">
-                    <span class="stat-num">{{ stat.num }}</span>
-                    <span class="stat-label">{{ stat.label }}</span>
-                </div>
-                {% endfor %}
-            </div>
-
-            <p>{{ legend.bio }}</p>
-            
-            <div class="fact-box">
-                <strong>Did You Know?</strong> {{ legend.fact | safe }}
-            </div>
+            {% endfor %}
+        </div>
+        <p>{{ legend.bio }}</p>
+        <div class="fact-box">
+            <strong>Did You Know?</strong> {{ legend.fact | safe }}
         </div>
     </div>
-    {% endfor %}
 </div>
+{% endfor %}

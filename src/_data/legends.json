@@ -2,7 +2,7 @@
   {
     "name": "Michael Schumacher 🇩🇪",
     "nickname": "The Red Baron",
-    "img": "https://placehold.co/500x500/b60000/fff?text=Schumacher",
+    "img": "/assets/images/michel.jpg",
     "stats": [
         { "num": "7", "label": "Titles" },
         { "num": "91", "label": "Wins" },
@@ -14,7 +14,7 @@
   {
     "name": "Lewis Hamilton 🇬🇧",
     "nickname": "Sir Lewis",
-    "img": "https://placehold.co/500x500/00d2be/fff?text=Hamilton",
+    "img": "/assets/images/hamilton.jpg",
     "stats": [
         { "num": "7", "label": "Titles" },
         { "num": "105", "label": "Wins" },
@@ -26,7 +26,7 @@
   {
     "name": "Ayrton Senna 🇧🇷",
     "nickname": "Rain Master",
-    "img": "https://placehold.co/500x500/fcd800/000?text=Senna",
+    "img": "/assets/images/senna.jpg",
     "stats": [
         { "num": "3", "label": "Titles" },
         { "num": "41", "label": "Wins" },
@@ -38,7 +38,7 @@
   {
     "name": "Niki Lauda 🇦🇹",
     "nickname": "The Rat",
-    "img": "https://placehold.co/500x500/d60000/fff?text=Niki+Lauda",
+    "img": "/assets/images/niki.jpg",
     "stats": [
         { "num": "3", "label": "Titles" },
         { "num": "25", "label": "Wins" },
@@ -50,7 +50,7 @@
   {
     "name": "Max Verstappen 🇳🇱",
     "nickname": "Mad Max",
-    "img": "https://placehold.co/500x500/0600ef/fff?text=Verstappen",
+    "img": "/assets/images/max.jpg",
     "stats": [
         { "num": "4", "label": "Titles" },
         { "num": "62", "label": "Wins" },
