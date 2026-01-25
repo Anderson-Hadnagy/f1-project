@@ -1,0 +1,10 @@
+{
+  "name": "Cadillac Andretti",
+  "color": "#f1c40f",
+  "base": "Fishers, USA",
+  "drivers": [
+    "11. Sergio Perez",
+    "77. Valtteri Bottas"
+  ],
+  "desc": "The 11th team! They bring massive GM support and two very experienced race winners."
+}
