@@ -30,9 +30,11 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post.njk"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post.njk"} 
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Author", name: "author", widget: "string", default: "F1 Editor"}
       - {label: "Thumbnail", name: "image", widget: "image", required: false}
+      # ADD THIS NEW FIELD:
+      - {label: "Tags", name: "tags", widget: "list", default: ["F1", "News"]} 
       - {label: "Body", name: "body", widget: "markdown"}
