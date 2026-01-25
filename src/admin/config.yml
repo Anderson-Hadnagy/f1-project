@@ -35,5 +35,4 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Author", name: "author", widget: "string", default: "F1 Editor"}
       - {label: "Thumbnail", name: "image", widget: "image", required: false}
-      # ADD THIS FIELD BELOW:
       - {label: "Body", name: "body", widget: "markdown"}
