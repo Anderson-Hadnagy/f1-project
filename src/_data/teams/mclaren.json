@@ -1,0 +1,10 @@
+{
+  "name": "McLaren",
+  "base": "Woking, UK",
+  "color": "#ff8700",
+  "drivers": [
+    "4. Lando Norris",
+    "81. Oscar Piastri"
+  ],
+  "desc": "The reigning Constructor Champions. Their car is the benchmark for aerodynamics."
+}
