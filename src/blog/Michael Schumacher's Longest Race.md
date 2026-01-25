@@ -1,10 +1,15 @@
 ---
 layout: post.njk
 title: "The Quiet Battle: Michael Schumacher's Longest Race"
-date: 2026-02-15
-author: "F1 Editor"
-image: "/assets/images/schumacheracc.jpg"
-tags: ["F1", "Legends", "KeepFighting"]
+date: 2026-01-15T13:07:00.000+01:00
+author: Zsiros András
+image: /assets/images/schumacheracc.jpg
+tags:
+  - F1
+  - Legends
+  - KeepFighting
+  - Michael Schumacher
+  - Accident
 ---
 
 For two decades, Michael Schumacher was the definition of invincibility. He survived the most dangerous era of modern motorsport, walking away from high-speed crashes at Silverstone and Melbourne with barely a scratch. It is a cruel irony that the man who tamed 200mph machines was silenced not by a racetrack, but by a family holiday in the French Alps.
